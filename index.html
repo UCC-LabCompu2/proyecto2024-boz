@@ -6,44 +6,42 @@
     <meta content="Emanuel Boz" name="Autor">
     <meta content="Web de acordes para canciones" name="Descripción">
     <meta content="acordes,canciones,musica" name="palabras-principales">
-    <link rel="stylesheet" href="miEstilo.css" type="text/css">
+    <link rel="stylesheet" href="pruebac.css" type="text/css">
 </head>
 <body>
-<header><h1><div class="rectangulo">TusAcordes</div></h1></header>
-<h1>TusAcordes</h1>
-<p>
-    <input list="lista" name="canciones" placeholder="Que cancion Buscas?">
-    <datalist id="lista">
-        <option value="Megusta_Ciro"><a href="megusta.html"> Me Gusta - Ciro y Los Persas</a></option>
-        <option value="jijiji">Jijiji - Los Redondos</option>
-        <option value="tnhmb">There's Nothing Holdin' Me Back - Shawn Mendes</option>
-    </datalist>
-</p>
-<p>
-    <button type="button">Buscar</button>
-</p>
-<sec>
-    <div>
-        <h2>TENDENCIAS</h2>
-        <p>
-            <img src="imagenes/ciro-megusta.jpg">
-        </p>
-        <p>
-            <a href="megusta.html">Me Gusta - Ciro </a>
-        </p>
-        <p>
-            <img src="imagenes/jijijilosredondos.jpg">
-        </p>
-        <p>
-            <a href="jijiji.html">JiJiJi - Los Redondos</a>
-        </p>
-        <p>
-            <img src="imagenes/theresnhmb-shawn.jpeg">
-        </p>
-        <p>
-            <a href="tnhmb.html">Ther´s Nothing Holding Me Back - Shawn Mendes</a>
-        </p>
+<header>
+    <div class="logo">
+        <span>TUS ACORDES</span><span class="com">.COM</span>
     </div>
-</sec>
+    <div>
+        <input list="lista" name="canciones" placeholder="¿Que cancion Buscas?">
+        <datalist id="lista">
+            <option value="Me Gusta"> Me Gusta - Ciro y Los Persas</option>
+            <option value="JiJiJi">Jijiji - Los Redondos</option>
+            <option value="There's Nothing Holdin' Me Back">There's Nothing Holdin' Me Back - Shawn Mendes</option>
+            <option value="Flaca">Flaca - Andrés Calamaro</option>
+        </datalist>
+        <button>BUSCAR</button>
+    </div>
+</header>
+<main>
+    <section class="tendencias">
+        <h2>TENDENCIAS</h2>
+        <div class="tendencias-grid">
+            <div class="tendencia-item">
+                <img src="imagenes/ciro-megusta.jpg" alt="Me Gusta - Ciro y Los Persas">
+                <p><a href="mgprueba.html"> Me Gusta - Ciro y Los Persas</a></p>
+            </div>
+            <div class="tendencia-item">
+                <img src="imagenes/jijijilosredondos.jpg" alt="Jijiji - Los Redondos">
+                <p><a href="jijiji.html">JiJiJi - Los Redondos</a></p>
+            </div>
+            <div class="tendencia-item">
+                <img src="imagenes/theresnhmb-shawn.jpeg" alt="There's Nothing Holdin' Me Back - Shawn Mendes">
+                <p><a href="tnhmb.html">There's Nothing Holdin' Me Back - Shawn Mendes</a></p>
+            </div>
+        </div>
+    </section>
+</main>
 </body>
 </html>
