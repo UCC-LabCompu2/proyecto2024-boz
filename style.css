@@ -1,0 +1,156 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f5f5f5;
+}
+
+header {
+    background-color: #666;
+    padding: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header .logo {
+    font-size: 24px;
+    font-weight: bold;
+    color: #fff;
+}
+
+header .logo .com {
+    color: red;
+}
+
+header .search-bar {
+    display: flex;
+    align-items: center;
+}
+
+header .search-bar input {
+    padding: 5px;
+    font-size: 16px;
+}
+
+header .search-bar button {
+    padding: 5px 10px;
+    margin-left: 5px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+main {
+    padding: 20px;
+}
+
+.tendencias {
+    text-align: center;
+}
+
+.tendencias h2 {
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+.tendencias-grid {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.tendencia-item {
+    width: 350px;
+    text-align: center;
+}
+
+.tendencia-item img {
+    width: 100%;
+    border-radius: 8px;
+}
+
+.tendencia-item p {
+    margin-top: 10px;
+    font-size: 16px;
+}
+
+.acordes {
+    background-color: #fff;
+    padding: 20px;
+    margin-top: 20px;
+    border-radius: 8px;
+}
+
+.acordes-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.cifrado-btn {
+    background-color: green;
+    color: #fff;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.tono-adjust {
+    display: flex;
+    align-items: center;
+}
+
+.tono-adjust button {
+    background-color: #ccc;
+    border: none;
+    padding: 5px 10px;
+    margin: 0 5px;
+    cursor: pointer;
+}
+
+.acordes-btn {
+    background-color: gray;
+    color: #fff;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.acordes-body {
+    margin-top: 20px;
+}
+
+.acordes-info {
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+
+.acordes-lyrics {
+    background-color: #f9f9f9;
+    padding: 20px;
+    border-radius: 8px;
+    font-size: 16px;
+}
+
+.acordes-lyrics pre {
+    white-space: pre-wrap;
+    margin: 0;
+}
+
+.acordes-link {
+    display: flex;
+    align-items: center;
+    margin-top: 20px;
+}
+
+.acordes-link img {
+    width: 100px;
+    border-radius: 8px;
+}
+
+.acordes-link span {
+    margin-left: 20px;
+    font-size: 18px;
+}
