@@ -19,6 +19,7 @@ header .logo {
     color: #fff;
     font-family: "Arial Narrow";
 }
+
 .sindecoración{
     text-decoration: none;
     color: #fff;
@@ -44,6 +45,10 @@ header .logo .com {
     border: none;
     border-radius: 5px;
     cursor: pointer;
+}
+
+.buscar-btn:hover {
+    background-color: #b80000;
 }
 
 main {
@@ -102,6 +107,10 @@ main {
     cursor: pointer;
 }
 
+.cifrado-btn:hover {
+    background-color: #006800;
+}
+
 .tono-adjust {
     display: flex;
     align-items: center;
@@ -115,6 +124,10 @@ main {
     cursor: pointer;
 }
 
+.tono-adjust button:hover {
+    background-color: #5e5e5e;
+}
+
 .acordes-btn {
     background-color: gray;
     color: #fff;
@@ -122,6 +135,10 @@ main {
     border: none;
     border-radius: 5px;
     cursor: pointer;
+}
+
+.acordes-btn:hover {
+    background-color: #5e5e5e;
 }
 
 .acordes-body {
