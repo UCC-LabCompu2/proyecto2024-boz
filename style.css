@@ -17,6 +17,7 @@ header .logo {
     font-size: 24px;
     font-weight: bold;
     color: #fff;
+    font-family: "Arial Narrow";
 }
 .sindecoración{
     text-decoration: none;
@@ -27,20 +28,21 @@ header .logo .com {
     color: red;
 }
 
-header .search-bar {
-    display: flex;
-    align-items: center;
+.serch-bar {
+    background-color: #b3b1b1;
+    color: #fff;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
 }
 
-header .search-bar input {
-    padding: 5px;
-    font-size: 16px;
-}
-
-header .search-bar button {
-    padding: 5px 10px;
-    margin-left: 5px;
-    font-size: 16px;
+.buscar-btn {
+    background-color: red;
+    color: #fff;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
     cursor: pointer;
 }
 
