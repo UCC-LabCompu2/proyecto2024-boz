@@ -20,6 +20,6 @@
 - HTML5
 - CSS3
 
-## Link al sitio: [Tus Acordes](https://github.com/UCC-LabCompu2/proyecto2024-boz/blob/main/index.html)
+## Link al sitio: [Tus Acordes](https://ucc-labcompu2.github.io/proyecto2024-boz/)
 
 #### *Desarrollado por: Emanuel Boz*
