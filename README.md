@@ -13,7 +13,7 @@
 
 1. Buscas tu canción favorita o eliges una de las que estan en tendencia.
 2. Modificas la tonalidad de la canción a la que mas se ajuste a lo que necesitas.
-3. Aprendes y practicas tu canción y al final tienes el video para escuchar la version original.
+3. Aprendes y practicas tu canción y al final tienes el video para escuchar la versión original.
 
 ## Tecnologías usadas: ##
 
