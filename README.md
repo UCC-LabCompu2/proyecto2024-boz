@@ -19,6 +19,7 @@
 
 - HTML5
 - CSS3
+- Java Script
 
 ## Link al sitio: [Tus Acordes](https://ucc-labcompu2.github.io/proyecto2024-boz/)
 
