@@ -186,3 +186,9 @@ main {
     max-width: 100%;
     height: auto;
 }
+#error-message {
+    color: red;
+    display: none;
+    margin-top: 10px; /* Ajusta el margen según sea necesario */
+    font-size: 14px; /* Ajusta el tamaño de la fuente según sea necesario */
+}
