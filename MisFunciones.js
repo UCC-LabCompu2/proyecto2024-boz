@@ -1,11 +1,29 @@
+/**
+ * Función que redirecciona a la canción seleccionada si existe en la lista.
+ * @method buscarCancionRedirect
+ * @param {string} selectedOption - Valor seleccionado en el input de búsqueda.
+ * @return {void}
+ */
 const buscarCancionRedirect = () => {
     console.log("Buscar canción llamada");
     const input = document.getElementById("buscar-canción");
     const selectedOption = input.value;
-    console.log("Valor seleccionado:", selectedOption);
-    window.location.href = selectedOption;
-};
+    const datalist = document.getElementById("lista");
+    const opciones = Array.from(datalist.options).map(option => option.value);
 
+    if (opciones.includes(selectedOption)) {
+        console.log("Valor seleccionado:", selectedOption);
+        window.location.href = selectedOption;
+    } else {
+        console.error("Canción no encontrada:", selectedOption);
+        const errorMessage = document.getElementById("error-message");
+        errorMessage.style.display = 'block';
+        input.value = '';
+    }
+};
+/**
+ * Objeto que mapea acordes americanos a su equivalente en español.
+ */
 const acordesAmericanoAEspañol = {
     "A": "La",
     "B": "Si",
@@ -36,11 +54,18 @@ const acordesAmericanoAEspañol = {
     "F#m": "Fam#m",
     "G#m": "Sol#m"
 };
-
+/**
+ * Objeto que mapea acordes españoles a su equivalente en americano.
+ * @method acordesEspañolAAmericano
+ */
 const acordesEspañolAAmericano = Object.fromEntries(
     Object.entries(acordesAmericanoAEspañol).map(([key, value]) => [value, key])
 );
-
+/**
+ * Función que convierte el cifrado de acordes americano a español.
+ * @method convertirACifradoOriginal
+ * @return {void}
+ */
 const convertirACifradoOriginal = () => {
     const acordesBody = document.querySelector('.acordes-lyrics');
     const acordesTexto = acordesBody.innerHTML;
@@ -49,7 +74,11 @@ const convertirACifradoOriginal = () => {
     });
     acordesBody.innerHTML = acordesConvertidos;
 };
-
+/**
+ * Función que convierte el cifrado de acordes español a americano.
+ * @method convertirACifradoAmericano
+ * @return {void}
+ */
 const convertirACifradoAmericano = () => {
     const acordesBody = document.querySelector('.acordes-lyrics');
     const acordesTexto = acordesBody.innerHTML;
@@ -58,7 +87,9 @@ const convertirACifradoAmericano = () => {
     });
     acordesBody.innerHTML = acordesConvertidos;
 };
-
+/**
+ * Objeto que mapea acordes para transposición.
+ */
 const acordesTransposicion = {
     "C": "C#",
     "C#": "D",
@@ -112,12 +143,19 @@ const acordesTransposicion = {
     "Bb7": "B7",
     "B7": "C7"
 };
-
+/**
+ * Objeto que mapea acordes para transposición inversa.
+ * @method acordesTranspocicionInversa
+ */
 const acordesTransposicionInversa = Object.keys(acordesTransposicion).reduce((obj, key) => {
     obj[acordesTransposicion[key]] = key;
     return obj;
 }, {});
-
+/**
+ * Función que transpone los acordes hacia arriba.
+ * @method transponerAcordesArriba
+ * @return {void}
+ */
 const transponerAcordesArriba = () => {
     const acordesBody = document.querySelector('.acordes-lyrics');
     const acordesTexto = acordesBody.innerHTML;
@@ -126,7 +164,11 @@ const transponerAcordesArriba = () => {
     });
     acordesBody.innerHTML = acordesConvertidos;
 };
-
+/**
+ * Función que transpone los acordes hacia abajo.
+ * @method transponerAcordesAbajo
+ * @return {void}
+ */
 const transponerAcordesAbajo = () => {
     const acordesBody = document.querySelector('.acordes-lyrics');
     const acordesTexto = acordesBody.innerHTML;
@@ -135,7 +177,11 @@ const transponerAcordesAbajo = () => {
     });
     acordesBody.innerHTML = acordesConvertidos;
 };
-
+/**
+ * Función que muestra u oculta la imagen de acordes.
+ * @method toggleImagen
+ * @return {void}
+ */
 const toggleImagen = () => {
     const imagenContainer = document.getElementById('acordes-imagen');
     const botonAcordes = document.getElementById('toggle-imagen-btn');
