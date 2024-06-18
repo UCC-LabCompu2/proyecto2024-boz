@@ -11,24 +11,26 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poetsen+One&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css" type="text/css">
+    <script src="MisFunciones.js"></script>
 </head>
 <body>
 <header>
     <div class="logo">
-        <nav><a href="index.html" class="sindecoración">TUS ACORDES</a></nav><nav class="com">.COM</nav>
+        <nav><h1><a href="index.html" class="sindecoración">TUS ACORDES</a></h1></nav><nav class="com">.COM</nav>
     </div>
     <div>
         <label for="buscar-canción"></label>
         <input id="buscar-canción" class="serch-bar" list="lista" name="canciones" placeholder="¿Que cancion Buscas?" size="25" maxlength="50">
         <datalist id="lista">
-            <option value="Me Gusta"> Me Gusta - Ciro y Los Persas</option>
-            <option value="JiJiJi">Jijiji - Los Redondos</option>
-            <option value="There's Nothing Holdin' Me Back">There's Nothing Holdin' Me Back - Shawn Mendes</option>
-            <option value="Flaca">Flaca - Andrés Calamaro</option>
+            <option value="mgprueba.html"> Me Gusta - Ciro y Los Persas</option>
+            <option value="jijiji.html">Jijiji - Los Redondos</option>
+            <option value="tnhmb.html">There's Nothing Holdin' Me Back - Shawn Mendes</option>
+            <option value="flaca.html">Flaca - Andrés Calamaro</option>
         </datalist>
-        <button class="buscar-btn">BUSCAR</button>
+        <button class="buscar-btn" onclick="buscarCancionRedirect()">BUSCAR</button>
     </div>
 </header>
+
 <main>
     <section class="tendencias">
         <h2>TENDENCIAS</h2>
