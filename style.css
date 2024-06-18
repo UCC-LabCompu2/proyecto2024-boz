@@ -15,7 +15,6 @@ header {
 
 header .logo {
     font-size: 24px;
-    font-weight: bold;
     color: #fff;
     font-family: "Poetsen One", sans-serif;
     font-weight: 400;
@@ -178,4 +177,12 @@ main {
 .acordes-link span {
     margin-left: 20px;
     font-size: 18px;
+}
+.acordes-imagen {
+    display: none; /* Oculta la imagen por defecto */
+    margin-top: 20px; /* Ajusta el margen superior según sea necesario */
+}
+.acordes-imagen img {
+    max-width: 100%; /* Ajusta el ancho máximo de la imagen */
+    height: auto; /* Mantiene la proporción de la imagen */
 }
