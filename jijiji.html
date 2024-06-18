@@ -9,6 +9,7 @@
     <meta content="acordes,canciones,musica" name="palabras-principales">
     <link href="https://fonts.googleapis.com/css2?family=Poetsen+One&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css" type="text/css">
+    <script src="MisFunciones.js"></script>
 </head>
 <body>
 <header>
@@ -18,13 +19,19 @@
 </header>
 <section class="acordes">
     <div class="acordes-header">
-        <button class="cifrado-btn">CIFRADO AMERICANO</button>
+        <button class="cifrado-btn" id="cambiar-acordes-americanos" onclick="convertirACifradoAmericano()" > CIFRADO ORIGINAL</button>
+        <button class="cifrado-btn" onclick="convertirACifradoOriginal()">CIFRADO AMERICANO</button>
         <div class="tono-adjust">
-            <button>-</button>
+            <button onclick="transponerAcordesAbajo()">-</button>
             <span>1/2 TONO</span>
-            <button>+</button>
+            <button onclick="transponerAcordesArriba()">+</button>
         </div>
-        <button class="acordes-btn">ACORDES</button>
+        <div class="acordes-body">
+            <button class="acordes-btn" id="toggle-imagen-btn" onclick="toggleImagen()">ACORDES</button>
+            <div class="acordes-imagen" id="acordes-imagen">
+                <img src="imagenes/AcordesJijiji.jpg" alt="Acordes de Jijiji-Los Redondos">
+            </div>
+        </div>
     </div>
     <div class="acordes-body">
         <div class="acordes-info">
