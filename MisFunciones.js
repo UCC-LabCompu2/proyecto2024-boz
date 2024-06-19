@@ -10,10 +10,16 @@ const buscarCancionRedirect = () => {
     const selectedOption = input.value;
     const datalist = document.getElementById("lista");
     const opciones = Array.from(datalist.options).map(option => option.value);
-
     if (opciones.includes(selectedOption)) {
         console.log("Valor seleccionado:", selectedOption);
-        window.location.href = selectedOption;
+        const canvasContainer = document.getElementById('canvas-container');
+        canvasContainer.style.display = 'flex';
+        const loadingInterval = drawLoadingCircle();
+        setTimeout(() => {
+            clearInterval(loadingInterval);
+            canvasContainer.style.display = 'none';
+            window.location.href = selectedOption;
+        }, 2000);
     } else {
         console.error("Canción no encontrada:", selectedOption);
         const errorMessage = document.getElementById("error-message");
@@ -194,3 +200,25 @@ const toggleImagen = () => {
         botonAcordes.textContent = 'ACORDES';
     }
 };
+/**
+ * Función que dibuja un círculo de carga animado en un elemento canvas.
+ * @method drawLoadingCircle
+ * @return {number} - El ID del intervalo de la animación, que puede ser utilizado para detener la animación posteriormente con clearInterval.
+ */
+function drawLoadingCircle() {
+    const canvas = document.getElementById('loading-canvas');
+    const ctx = canvas.getContext('2d');
+    let startAngle = 0;
+
+    function draw() {
+        ctx.clearRect(0, 0, canvas.width, canvas.height);
+        ctx.beginPath();
+        ctx.arc(50, 50, 20, startAngle, startAngle + Math.PI * 1.5);
+        ctx.lineWidth = 5;
+        ctx.strokeStyle = '#000';
+        ctx.stroke();
+        startAngle += 0.1;
+    }
+
+    return setInterval(draw, 100);
+}
