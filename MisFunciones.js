@@ -21,9 +21,10 @@ const buscarCancionRedirect = () => {
             window.location.href = selectedOption;
         }, 2000);
     } else {
-        console.error("Canción no encontrada:", selectedOption);
         const errorMessage = document.getElementById("error-message");
-        errorMessage.style.display = 'block';
+        if (errorMessage) {
+            errorMessage.style.display = 'block';
+        }
         input.value = '';
     }
 };
