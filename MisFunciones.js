@@ -205,12 +205,12 @@ const toggleImagen = () => {
  * @method drawLoadingCircle
  * @return {number} - El ID del intervalo de la animación, que puede ser utilizado para detener la animación posteriormente con clearInterval.
  */
-function drawLoadingCircle() {
+const drawLoadingCircle = () => {
     const canvas = document.getElementById('loading-canvas');
     const ctx = canvas.getContext('2d');
     let startAngle = 0;
 
-    function draw() {
+    const draw = () => {
         ctx.clearRect(0, 0, canvas.width, canvas.height);
         ctx.beginPath();
         ctx.arc(50, 50, 20, startAngle, startAngle + Math.PI * 1.5);
@@ -218,7 +218,6 @@ function drawLoadingCircle() {
         ctx.strokeStyle = '#000';
         ctx.stroke();
         startAngle += 0.1;
-    }
-
+    };
     return setInterval(draw, 100);
-}
+};
